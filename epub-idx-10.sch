@@ -48,7 +48,7 @@
 	<pattern id="index-legend">
 		<rule context="h:*[tokenize(@epub:type,'\s+')='index-legend']">
 			<assert test="self::h:dl|self::h:section|self::h:article|self::h:aside|self::h:nav">The
-				'index-headnotes' type is only allowed on 'dl' or sectioning elements.</assert>
+				'index-legend' type is only allowed on 'dl' or sectioning elements.</assert>
 			<assert test="parent::h:*[tokenize(@epub:type,'\s+')='index-headnotes']">The
 				'index-legend' type is only allowed as a child of 'index-headnotes'.</assert>
 			<!--Note: index-legend should be or contain a 'dl', however this is not a requirement-->
@@ -126,7 +126,7 @@
 				'index-xref-preferred' or 'index-xref-related'.</assert>
 			<assert
 				test="count(h:ul[not(@epub:type)]|h:*[tokenize(@epub:type,'\s+')='index-entry-list']) le 1"
-				>An 'index-enty' must have at most one child with the (possibly implied) type
+				>An 'index-entry' must have at most one child with the (possibly implied) type
 				'index-entry-list'.</assert>
 			<assert
 				test="if (h:*[tokenize(@epub:type,'\s+')='index-locator-list']) 
@@ -134,9 +134,6 @@
                       else true()"
 				>An 'index-entry' must not have both 'index-locator-list' and 'index-locator'
 				children.</assert>
-			<assert test="count(h:*[tokenize(@epub:type,'\s+')='index-locator-list']) le 1">An
-				'index-entry' must have at most one child with the type
-				'index-locator-list'.</assert>
 			<assert test="count(h:*[tokenize(@epub:type,'\s+')='index-locator-list']) le 1">An
 				'index-entry' must have at most one child with the type
 				'index-locator-list'.</assert>
@@ -154,7 +151,7 @@
                                                                         'index-locator-list','index-locator',
                                                                         'index-xref-preferred','index-xref-related','pagebreak')]
                                        |h:ul[not(@epub:type)]))"
-				>An 'index-entry' mudt not have children other 'index-term', (possibly implied)
+				>An 'index-entry' must not have children other 'index-term', (possibly implied)
 				'index-entry-list', 'index-locator-list',
 				'index-locator','index-editor-note','index-xref-preferred', 'index-xref-related' and
 				'pagebreaks'.</assert>
