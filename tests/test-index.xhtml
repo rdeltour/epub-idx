@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen SCHSchema="../epub-idx.sch"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops"
+    xml:lang="en-US" lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>test index</title>
+    </head>
+    <body>
+        <!--=================================================-->
+        <!-- Index on sectioning content                     -->
+        <!--=================================================-->
+        <!--VALID-->
+        <section epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <aside epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </aside>
+        <article epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </article>
+        <nav epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </nav>
+        <!--INVALID: 'index' must be on sectioning content -->
+        <div epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </div>
+        <!--=================================================-->
+        <!-- Index heading child                             -->
+        <!--=================================================-->
+        <!--VALID -->
+        <section epub:type="index">
+            <h1>Test Index</h1>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <h3>Test Index</h3>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <h4>Test Index</h4>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <h5>Test Index</h5>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <h6>Test Index</h6>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--ERROR: more than one heading -->
+        <section epub:type="index">
+            <h2>Test Index</h2>
+            <h2>Test Index</h2>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--=================================================-->
+        <!-- Index head notes child -->
+        <!--=================================================-->
+        <!--VALID -->
+        <section epub:type="index">
+            <header epub:type="index-headnotes">
+                <p>head notes</p>
+            </header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--ERROR: more than 1 index-headnotes -->
+        <section epub:type="index">
+            <header epub:type="index-headnotes">
+                <p>head notes</p>
+            </header>
+            <header epub:type="index-headnotes">
+                <p>head notes</p>
+            </header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--ERROR: at least one 'index-entry-list' or 'index-group' must be present-->
+        <!--=================================================-->
+        <!-- Index entry list or entry group -->
+        <!--=================================================-->
+        <!--VALID -->
+        <!--index-entry-list-->
+        <section epub:type="index">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--implied index-entry-list-->
+        <section epub:type="index">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--index-group-->
+        <section epub:type="index">
+            <section epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <!--More than one group-->
+        <section epub:type="index">
+            <section epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+            <section epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <!--ERROR: more than one entry-list-->
+        <section epub:type="index">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+            <ul>
+                <!--this one is implied-->
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--ERROR: neither index-entry-list nor index-group -->
+        <section epub:type="index"> </section>
+        <!--=================================================-->
+        <!-- Index other children                            -->
+        <!--=================================================-->
+        <!--VALID -->
+        <section epub:type="index">
+            <div epub:type="pagebreak" id="page25">25</div>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+            <div epub:type="pagebreak" id="page25">26</div>
+        </section>
+        <!--ERROR: -->
+        <section epub:type="index">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+            <div>other content</div>
+        </section>
+        <!--=================================================-->
+        <!-- Index HeadNotes                                 -->
+        <!--=================================================-->
+        <!--VALID-->
+        <section epub:type="index">
+            <header epub:type="index-headnotes"></header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <aside epub:type="index-headnotes"></aside>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <section epub:type="index-headnotes"></section>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-headnotes with non-entry-list ul child"
+            class="valid">
+            <section epub:type="index-headnotes">
+                <ul>
+                    <li>ok</li>
+                </ul>
+            </section>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID: 'index-headnotes' must be on header or sectioning content -->
+        <section epub:type="index">
+            <div epub:type="index-headnotes"></div>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID: 'index-headnotes' must be a child of index-->
+        <section>
+            <header epub:type="index-headnotes"></header>
+        </section>
+        <!--=================================================-->
+        <!-- Index Legend                                    -->
+        <!--=================================================-->
+        <section epub:type="index">
+            <header epub:type="index-headnotes">
+                <aside epub:type="index-legend"></aside>
+            </header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index">
+            <header epub:type="index-headnotes">
+                <dl epub:type="index-legend"></dl>
+            </header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID index-legend s/b a 'dl' or sectioning content-->
+        <section epub:type="index">
+            <header epub:type="index-headnotes">
+                <div epub:type="index-legend"></div>
+            </header>
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID index-legend s/b a child of index-headnotes -->
+        <section>
+            <aside epub:type="index-legend"></aside>
+        </section>
+        <!--=================================================-->
+        <!-- Index Group                                     -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-group" class="valid">
+            <section epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group on article" class="valid">
+            <article epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </article>
+        </section>
+        <section epub:type="index" title="index-group with implied index-entry-list" class="valid">
+            <section epub:type="index-group">
+                <ul>
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with a heading" class="valid">
+            <section epub:type="index-group">
+                <h1>title</h1>
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with pagebreaks" class="valid">
+            <section epub:type="index-group">
+                <span epub:type="pagebreak">42</span>
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+                <span epub:type="pagebreak">43</span>
+            </section>
+        </section>
+        <!--INVALID-->
+        <section epub:type="index-group" title="index-group not child of index" class="invalid">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-group on non-sectioning content" class="invalid">
+            <div epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </div>
+        </section>
+        <section epub:type="index" title="index-group with multiple headings" class="invalid">
+            <section epub:type="index-group">
+                <h1>title</h1>
+                <h2>title</h2>
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with multiple entry lists" class="invalid">
+            <section epub:type="index-group">
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+                <ul epub:type="index-entry-list">
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with multiple implied entry lists"
+            class="invalid">
+            <section epub:type="index-group">
+                <ul>
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+                <ul>
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with other children" class="invalid">
+            <section epub:type="index-group">
+                <ul>
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+                <p>invalid</p>
+            </section>
+        </section>
+        <section epub:type="index" title="index-group with other explicit ul child" class="invalid">
+            <section epub:type="index-group">
+                <ul>
+                    <li><span epub:type="index-term">meaning of life</span>, <a
+                            epub:type="index-locator" href="...">42</a></li>
+                </ul>
+                <ul epub:type="foo"></ul>
+            </section>
+        </section>
+        <!--=================================================-->
+        <!-- Index Entry List                                -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-entry-list" class="valid">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="implied index-entry-list" class="valid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry-list within an entry" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-entry-list">
+                        <li><span epub:type="index-term">answer</span>, <a epub:type="index-locator"
+                                href="...">42</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry-list with explicit index-entry" class="valid">
+            <ul epub:type="index-entry-list">
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry-list with multiple index-entry" class="valid">
+            <ul epub:type="index-entry-list">
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="no-index" title="index-entry-list no descendant of index"
+            class="invalid">
+            <ul epub:type="index-entry-list">
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry-list with no index-entry" class="invalid">
+            <ul epub:type="index-entry-list"> </ul>
+        </section>
+        <section epub:type="index" title="implied index-entry-list with no index-entry"
+            class="invalid">
+            <ul> </ul>
+        </section>
+        <!--=================================================-->
+        <!-- Index Entry                                     -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-entry" class="valid">
+            <ul epub:type="index-entry-list">
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="implied index-entry" class="valid">
+            <ul epub:type="index-entry-list">
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry as a child of an implied index-entry-list"
+            class="valid">
+            <ul>
+                <li epub:type="index-entry"><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="implied index-entry as a child of an implied index-entry-list" class="valid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="implied index-entry with an implied 'index-entry-list' child" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul>
+                        <li><span epub:type="index-term">value</span>, <a epub:type="index-locator"
+                                href="...">42</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="implied index-entry with an explicit 'index-entry-list' child" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-entry-list">
+                        <li><span epub:type="index-term">value</span>, <a epub:type="index-locator"
+                                href="...">42</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with an index-locator-list child"
+            class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with an index-editor-note child" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-editor-note">tbd</span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with an see xref child" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term"
+                        >42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with an see also xref child" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term">Monty
+                            Python</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with multiple see also xref child"
+            class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term">Monty
+                            Python</a></span>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term">Deep
+                            Thought</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with page breaks" class="valid">
+            <ul>
+                <li><span epub:type="pagebreak">41</span><span epub:type="index-term">meaning of
+                        life</span>, <a epub:type="index-locator" href="...">42</a><span
+                        epub:type="pagebreak">42</span></li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="no-index" title="index-entry not child of an index-entry-list"
+            class="invalid">
+            <ul>
+                <li epub:type="index-entry">...</li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry not in the index body" class="invalid">
+            <aside epub:type="index-headnotes">
+                <ul>
+                    <li epub:type="index-entry">...</li>
+                </ul>
+            </aside>
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with no index-term" class="invalid">
+            <ul>
+                <li><span>meaning of life</span>, <a epub:type="index-locator" href="..."
+                    >42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with more than one index-term" class="invalid">
+            <ul>
+                <li><span epub:type="index-term">meaning</span><span epub:type="index-term">of
+                        life</span>, <a epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="implied index-entry with missing child" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="implied index-entry with more than one explicit 'index-entry-list' children"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-entry-list">
+                        <li><span epub:type="index-term">meaning of life</span>, <a
+                                epub:type="index-locator" href="...">42</a></li>
+                    </ul>
+                    <ul epub:type="index-entry-list">
+                        <li><span epub:type="index-term">meaning of life</span>, <a
+                                epub:type="index-locator" href="...">42</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="implied index-entry with more than one implied 'index-entry-list' children"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul>
+                        <li><span epub:type="index-term">meaning of life</span>, <a
+                                epub:type="index-locator" href="...">42</a></li>
+                    </ul>
+                    <ul>
+                        <li><span epub:type="index-term">meaning of life</span>, <a
+                                epub:type="index-locator" href="...">42</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with more than one index-locator-list child"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index"
+            title="index-entry with both index-locator-list and index-locator children"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <a epub:type="index-locator">42</a>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with more than one index-editor-note child"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-editor-note">tbd</span>
+                    <span epub:type="index-editor-note">tbd</span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with both see and see also xref children"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term"
+                        >42</a></span>
+                    <span epub:type="index-xref-related">see also<a epub:type="index-term">Deep
+                            Thought</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with disallowed children" class="invalid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a>
+                    <span>invalid</span></li>
+            </ul>
+        </section>
+
+
+        <!--=================================================-->
+        <!-- Index Term                                      -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-term" class="valid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="no-index" title="index-term outside of index" class="invalid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-term not on a phrasing-content element"
+            class="invalid">
+            <ul>
+                <li><div epub:type="index-term">meaning of life</div>, <a epub:type="index-locator"
+                        href="...">42</a></li>
+            </ul>
+        </section>
+
+        <!--=================================================-->
+        <!-- Index Editor Note                                      -->
+        <!--=================================================-->
+        <section epub:type="index-editor-note" title="index-editor-note outside of an index"
+            class="invalid"> ... </section>
+
+        <!--=================================================-->
+        <!-- Index Locator List                              -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-locator-list" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a epub:type="index-locator">42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-locator-list with implied index-locator descendant"
+            class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="index" title="index-locator-list with no index-locator descendant"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>42</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="no-index" title="index-locator-list outside of index" class="invalid">
+            <ul epub:type="index-locator-list">
+                <li>
+                    <a epub:type="index-locator">42</a>
+                </li>
+            </ul>
+        </section>
+
+        <!--=================================================-->
+        <!-- Index Locator                                   -->
+        <!--=================================================-->
+        <section epub:type="index" title="minimal index-locator" class="valid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <a
+                        epub:type="index-locator" href="...">42</a></li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-locator in locator-list" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li>
+                            <a epub:type="index-locator">42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--FIXME check if index-locator-range allowed as child of index-entry-->
+        <!--<section epub:type="index" title="index-locator in locator-range" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-locator-range">
+                        <a epub:type="index-locator">42-42</a>
+                    </span>
+                </li>
+            </ul>
+        </section>-->
+        <!--INVALID-->
+        <section epub:type="index" title="index-locator not an a 'a' element" class="invalid">
+            <ul>
+                <li><span epub:type="index-term">meaning of life</span>, <span
+                        epub:type="index-locator" href="...">42</span></li>
+            </ul>
+        </section>
+
+        <!--=================================================-->
+        <!-- Index Locator Range                             -->
+        <!--=================================================-->
+        <section epub:type="index" title="index-locator-range with one locator" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li epub:type="index-locator-range">
+                            <a epub:type="index-locator">42-42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-locator-range with two locators" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li epub:type="index-locator-range">
+                            <a epub:type="index-locator">42</a>
+                            <a epub:type="index-locator">42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-locator-range with implied locators" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li epub:type="index-locator-range">
+                            <a>42</a>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="index" title="index-locator-range with more than two locators"
+            class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li epub:type="index-locator-range">
+                            <a>42</a>
+                            <a>42</a>
+                            <a>42</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-locator-range with no locators" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <ul epub:type="index-locator-list">
+                        <li epub:type="index-locator-range">42</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!--=================================================-->
+        <!-- Index XRef Preferred                            -->
+        <!--=================================================-->
+        <section epub:type="index" title="index-xref-preferred with one index-term" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term"
+                        >42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-preferred also an index-term" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <a epub:type="index-term index-xref-preferred"
+                        >42</a>
+                </li>
+            </ul>
+        </section>
+        <!--FIXME check validity of this rule-->
+        <section epub:type="index" title="index-entry with multiple index-terms" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term">42</a> and
+                            <a epub:type="index-term">42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-preferred with one index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term-category"
+                        >philosophical questions</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-preferred also a index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <a epub:type="index-xref-preferred index-term-category"
+                        >philosophical questions</a>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with multiple index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term-category"
+                        >philosophical questions</a> or <a epub:type="index-term-category"
+                            >Monty Python's movies</a></span>
+                </li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="no-index" title="index-xref-preferred outside of index" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-xref-preferred">see <a epub:type="index-term"
+                        >42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-preferred with no index-term or index-term-category" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-preferred">see 42</span>
+                </li>
+            </ul>
+        </section>
+        
+        
+        <!--=================================================-->
+        <!-- Index XRef Related                            -->
+        <!--=================================================-->
+        <section epub:type="index" title="index-xref-related with one index-term" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also<a epub:type="index-term"
+                        >42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-related also an index-term" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <a epub:type="index-term index-xref-related"
+                        >42</a>
+                </li>
+            </ul>
+        </section>
+        <!--FIXME check validity of this rule-->
+        <section epub:type="index" title="index-entry with multiple index-terms" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term">42</a> and
+                        <a epub:type="index-term">42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-related with one index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also<a epub:type="index-term-category"
+                        >philosophical questions</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-related also a index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <a epub:type="index-xref-related index-term-category"
+                        >philosophical questions</a>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-entry with multiple index-term-category" class="valid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term-category"
+                        >philosophical questions</a> or <a epub:type="index-term-category"
+                            >Monty Python's movies</a></span>
+                </li>
+            </ul>
+        </section>
+        <!--INVALID-->
+        <section epub:type="no-index" title="index-xref-related outside of index" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-xref-related">see also <a epub:type="index-term"
+                        >42</a></span>
+                </li>
+            </ul>
+        </section>
+        <section epub:type="index" title="index-xref-related with no index-term or index-term-category" class="invalid">
+            <ul>
+                <li>
+                    <span epub:type="index-term">meaning of life</span>
+                    <span epub:type="index-xref-related">see 42</span>
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
