@@ -129,10 +129,10 @@
 				'index-entry-list'.</assert>
 			<assert
 				test="if ($semchilds[tokenize(@epub:type,'\s+')='index-locator-list']) 
-				      then empty($semchilds[tokenize(@epub:type,'\s+')='index-locator'])
+				      then empty($semchilds[tokenize(@epub:type,'\s+')=('index-locator','index-locator-range')])
                       else true()"
-				>An 'index-entry' must not have both 'index-locator-list' and 'index-locator'
-				children.</assert>
+				>An 'index-entry' must not have both 'index-locator-list' and 'index-locator' 
+				or 'index-locator-range' children.</assert>
 			<assert test="count($semchilds
 				               [tokenize(@epub:type,'\s+')='index-locator-list']) 
 				          le 1">An
