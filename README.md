@@ -1,21 +1,21 @@
 This repository is used to develop schema(s) for the [EPUB IDX](http://idpf.org/epub/idx/epub-indexes.html) specification. It also includes schema tests.
 
-## Contents
+## Schema(s)
 
-The only available schema is a Schematron-based schema for EPUB XHTML Content Documents including index content as defined in the [EPUB IDX](http://idpf.org/epub/idx/epub-indexes.html) specification.
+The only available schema is an [Schematron](http://schematron.com/)-based schema for EPUB XHTML Content Documents including index content as defined in the [EPUB IDX](http://idpf.org/epub/idx/epub-indexes.html) specification.
 
 
 ## How to run tests
 
-{{{
+```
 mvn clean test
-}}}
+```
 
 This will:
 
  * expand Schematron abstract patterns and generate the output schema in `target/schema/schema-expanded.xsl`
  * compile the expanded Schematron schema in `target/schema/schema-compiled.xsl`
- * convert the single test file to multiple test sources + XSpec tests in `target/tests/`
+ * convert the single test file to multiple test sources + [XSpec](https://code.google.com/p/xspec/) tests in `target/tests/`
  * run the generated tests
 
 ## How to write tests
